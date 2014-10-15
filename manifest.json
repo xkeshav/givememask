@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "mask me",
+  "description": "This extension hide your profile section",
+  "version": "1.0",
+  "icons": {
+    "16": "foto/icon_24.png",
+    "48": "foto/icon_48.png"
+  },
+  "page_action": {
+    "default_icon": "foto/icon_32.png",
+    "default_popup": "popup.html",
+    "default_title": "give me mask"
+  },
+  "background": {
+    "page": "background.html",
+    "persistent": false
+    // "scripts": ["js/background.js"]
+  },
+  "omnibox": { "keyword" : "mask" },
+  "permissions": [
+        "tabs",
+        "activeTab",
+        "topSites",
+        "http://*/*",
+        "https://*/*"
+  ],
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["js/jquery.min.js"],
+    "css": ["css/basic.css"]
+  }]
+}
