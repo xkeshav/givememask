@@ -1,10 +1,11 @@
 {
   "manifest_version": 2,
   "name": "mask me",
-  "description": "This extension hide your profile section",
+  "description": "This extension mask your profile section",
   "version": "1.0",
   "icons": {
-    "16": "foto/icon_24.png",
+    "24": "foto/icon_24.png",
+    "32": "foto/icon_32.png",
     "48": "foto/icon_48.png"
   },
   "browser_action": {
@@ -15,19 +16,19 @@
   "background": {
     "page": "background.html",
     "persistent": false
-    // "scripts": ["js/background.js"]
+    //"scripts": ["js/background.js"]
   },
   "omnibox": { "keyword" : "mask" },
   "permissions": [
         "tabs",
-        "activeTab",
+        // "activeTab",
         "topSites",
         "http://*/*",
         "https://*/*"
   ],
   "content_scripts": [{
     "matches": ["<all_urls>"],
-    "js": ["js/jquery.min.js"],
-    "css": ["css/basic.css"]
+    "js": ["js/jquery.min.js"]
+    // "css": ["css/basic.css"]
   }]
 }

@@ -1,7 +1,12 @@
 #content h3 {
   color: green;
 }
+a {
+  color: #900;
+  text-decoration: none;
+}
 
-#mostVisited_div {
-    display: none;
+a:hover {
+  color: red;
+  position: relative;
 }
